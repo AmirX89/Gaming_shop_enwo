@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GameGear | لوازم گیمینگ</title>
+  <link rel="stylesheet" href="font/B Zar Bold_0.ttf">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        text-decoration: none !important;
+    }
+    :root {
+      --bg: #0f0f15;
+      --text: #e0e0ff;
+      --accent: #b800ff;
+      --accent-light: #ff2a6d;
+      --card-bg: #1a1a25;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+    .navbar {
+      background-color: rgba(15, 15, 21, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--accent);
+    }
+    .navbar-brand, .nav-link {
+      font-weight: 600;
+      transition: color 0.25s;
+    }
+    .nav-link{
+      color: purple;
+    }
+    .nav-brand {
+      color: var(--accent) !important;
+      text-shadow: 0 0 10px var(--accent);
+    }
+    .nav-link:hover{
+      color: var(--accent-light) !important;
+      text-shadow: 0 0 8px var(--accent-light);
+    }
+    .hero-title{
+      font-size: 3rem;
+      font-weight: 800;
+      color: white;
+    }
+    .hero-title span{
+      color: var(--accent);
+      text-shadow: 0 0 12px var(--accent);
+    }
+    .hero-title2 {
+      font-size: 1.5rem;
+      font-weight: 1000;
+      color: white;
+    }
+    .hero-title2 span{
+      color: var(--accent);
+      text-shadow: 0 0 12px var(--accent);
+    }
+    #dynamic-word2{
+      color: blue;
+    }
+    .card{
+      background-color: var(--card-bg);
+      border: 1px solid transparent;
+      transition: transform 0.4s, box-shadow 0.4s, border 0.4s;
+      border-radius: 16px;
+    }
+    .card:hover{
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px rgba(184, 0, 255, 0.5);
+      border-color: var(--accent);
+    }
+    .product-icon{
+      width: 100px;
+      height: 100px;
+      background-color: linear-gradient(45deg, #222, #444);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      margin: 0 auto 1rem;
+      color: var(--accent-light);
+    }
+    .btn-game{
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    .btn-game:hover{
+      background-color: var(--accent);
+      color: var(--bg);
+      box-shadow: 0 0 15px var(--accent);
+    }
+    footer{
+      background-color: rgba(0, 0, 0, 0.25);
+      color: #888;
+      padding: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    .beforetext::before{
+        content: "2025 GameGear. تمامی حقوق محفوظ است.";
+    }
+    .display-flex .vipcols{
+        display: flex;
+        justify-content: start;
+        margin-top: 15px;
+        white-space: nowrap;
+    }
+    @font-face {
+        font-family: fontsvip;
+        src: url(font/B\ Zar\ Bold_0.ttf);
+    }
+    .vipfont{
+        font-family: fontsvip;
+    }
+    @keyframes animation {
+        0%{border: 1px solid purple;}
+        25%{border: 1.5px solid purple;}
+        50%{border: 2px solid purple;}
+        75%{border: 2.5px solid purple;}
+        100%{border: 3px solid purple;}
+    }
+    .box{
+        border: 1px solid purple;
+    }
+    @media screen and (max-width:500px) {
+        .boxcol , .boxer , .boxers{
+        font-size: 14px;
+        }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top vipfont">
+    <div class="container align-items-center">
+            <a class="navbar-brand fw-bold fs-3 text-danger" href="#">🎮 GameGear</a>
+            <div class="d-lg-none bg-secondary p-2 rounded-3" style="border:1px solid purple; animation: animation 5s;animation-iteration-count: infinite;animation-direction: alternate;"><i class="bi bi-cart-dash fw-bolder" style="color: purple;"></i></div>
+            <div class="navbar-nav me-auto d-none d-lg-flex fs-5">
+                <a class="nav-link" href="#">خانه</a>
+                <a class="nav-link" href="#">محصولات</a>
+                <a class="nav-link" href="#">درباره ما</a>
+                <a class="nav-link" href="#">تماس</a>
+            </div>
+        </div>
+  </nav>
+
+
+  <!--pc-->
+  <header class="text-center py-5 mt-5 mb-4 d-none d-lg-block">
+    <div class="container">
+      <h1 class="hero-title">لوازم <span id="dynamic-word">گیمینگ</span> حرفه‌ای</h1>
+      <p class="opacity-75 mt-3">کنسول، قاب کیس، کیبورد، ماوس و هرچی که گیمر واقعی نیاز داره!</p>
+    </div>
+  </header>
+  <!--mobile-->
+  <header class="text-center py-5 mt-5 mb-4 d-lg-none">
+    <div class="container">
+      <h1 class="hero-title2">لوازم <span id="dynamic-word2">گیمینگ</span> حرفه‌ای</h1>
+      <p class="opacity-50 mt-2">کنسول، قاب کیس، کیبورد، ماوس و هرچی که گیمر واقعی نیاز داره!</p>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- محصولات -->
+  <section class="container mb-5">
+    <div class="row g-4">
+      
+      <div class="col-12 col-lg-3">
+        <div class="card p-4 text-center h-100 box" >
+          <div class="product-icon"><img class="img-fluid rounded-2" src="img/280x280.avif" alt=""></div>
+          <h5 class="card-title text-white mb-3">ماوس ریزر گیمینگ Viper Ultimate بدون داک شارژ</h5>
+          <p class="text-accent  fw-bold w-75 m-auto rounded-5 p-1" style="background-color: purple; color: black; border:1px solid black;">1,085,000 تومان</p>
+          <button class="btn btn-game mt-2 boxcol">افزودن به سبد</button>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="card p-4 text-center h-100 box">
+          <div class="product-icon"><img src="img/mouse2.avif" class="img-fluid rounded-2" alt=""></div>
+          <h5 class="card-title text-white boxer">ماوس گیمینگ آئولا مدل F815 با سیم</h5>
+          <p class="text-accent m-auto fw-bold rounded-5 p-1 w-75 d-none d-lg-block" style="background-color: purple; color:black; border:1px solid black;">2,850,000 تومان</p>
+          <p class="text-accent m-auto fw-bold rounded-5 p-1 d-lg-none boxers" style="background-color: purple; color:black; border:1px solid black;">2,850,000 تومان</p>
+          <button class="btn btn-game mt-2 boxcol">افزودن به سبد</button>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="card p-4 text-center h-100 box">
+          <div class="product-icon"><img src="img/keyboard.avif" class="img-fluid rounded-2" alt=""></div>
+          <h5 class="card-title boxer text-white">کیبورد گیمینگ جیکنگ مدل JK-922</h5>
+          <p class="text-accent m-auto fw-bold rounded-5 p-1 w-75 d-none d-lg-block" style="background-color: purple; color:black; border:1px solid black;">870,000 تومان</p>
+          <p class="text-accent m-auto fw-bold rounded-5 p-1 d-lg-none boxers" style="background-color: purple; color:black; border:1px solid black;">870,000 تومان</p>
+          <button class="btn btn-game mt-2 boxcol">افزودن به سبد</button>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="card p-4 text-center h-100 box">
+          <div class="product-icon"><img src="img/qub case.avif" class="img-fluid rounded-2" alt=""></div>
+          <h5 class="card-title boxer text-white">کیس HYTE Y70 Touch Infinite - Pitch Black</h5>
+          <p class="text-accent m-auto fw-bold rounded-5 p-1 w-75 d-none d-lg-block" style="background-color: purple; color:black; border:1px solid black;">38,000,000 تومان</p>
+          <p class="text-accent m-auto fw-bold rounded-5 p-1 d-lg-none boxers" style="background-color: purple; color:black; border:1px solid black;">38,000,00 تومان</p>
+          <button class="btn btn-game mt-2 boxcol">افزودن به سبد</button>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="card p-4 text-center h-100 box">
+          <div class="product-icon"><img src="img/monitor.avif" class="img-fluid rounded-2" alt=""></div>
+          <h5 class="card-title boxer text-white">مانیتور سامسونگ LF22T350FH سایز ۲۲ اینچ IPS</h5>
+          <p class="text-accent m-auto fw-bold rounded-5 p-1 w-75 d-none d-lg-block" style="background-color: purple; color:black; border:1px solid black;">5,700,000 تومان</p>
+          <p class="text-accent m-auto fw-bold rounded-5 p-1 d-lg-none boxers" style="background-color: purple; color:black; border:1px solid black;">5,700,000 تومان</p>
+          <button class="btn btn-game mt-2 boxcol">افزودن به سبد</button>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="card p-4 text-center h-100 box">
+          <div class="product-icon"><img src="img/monitor2.avif" class="img-fluid rounded-2" alt=""></div>
+          <h5 class="card-title boxer text-white">مانیتور گیمینگ شیائومی مدل سایز ۳۴ اینچ منحنی</h5>
+          <p class="text-accent m-auto fw-bold rounded-5 p-1 w-75 d-none d-lg-block" style="background-color: purple; color:black; border:1px solid black;">30,500,000 تومان</p>
+          <p class="text-accent m-auto fw-bold rounded-5 p-1 d-lg-none boxers" style="background-color: purple; color:black; border:1px solid black;">30,500,00 تومان</p>
+          <button class="btn btn-game mt-2 boxcol">افزودن به سبد</button>
+        </div>
+      </div>
+      
+      <div class="col-6 col-lg-3">
+        <div class="card p-4 text-center h-100 box">
+          <div class="product-icon"><img src="img/headst.avif" class="img-fluid rounded-2" alt=""></div>
+          <h5 class="card-title boxer text-white">هدست با سیم ریزر مدل Blackshark v2 X</h5>
+          <p class="text-accent m-auto fw-bold rounded-5 p-1 w-75 d-none d-lg-block" style="background-color: purple; color:black; border:1px solid black;">3,790,000 تومان</p>
+          <p class="text-accent m-auto fw-bold rounded-5 p-1 d-lg-none boxers" style="background-color: purple; color:black; border:1px solid black;">3,790,000 تومان</p>
+          <button class="btn btn-game mt-2 boxcol">افزودن به سبد</button>
+        </div>
+      </div>
+      
+      <div class="col-12 col-lg-3">
+        <div class="card p-4 text-center h-100 box" >
+          <div class="product-icon"><img src="img/cpu.avif" class="img-fluid rounded-2" alt=""></div>
+          <h5 class="card-title text-white">CPU اینتل مدل Core i5-11400F Rocket Lake Tray</h5>
+          <p class="text-accent  fw-bold w-75 m-auto rounded-5 p-1" style="background-color: purple; color: black; border:1px solid black;">11,150,000 تومان</p>
+          <button class="btn btn-game mt-2 boxcol">افزودن به سبد</button>
+        </div>
+      </div>
+      
+      <div class="d-none d-lg-block"> <a href="" class="text-decoration-none text-danger">بقیه محصولات ....</a></div>
+
+    </div>
+      
+  </section>
+
+
+  </main>
+
+
+
+  <!-- فوتر -->
+  <footer class="text-center beforetext">
+    <div class="container mt-2 ">
+        <div class="row display-flex">
+            <div class="col-6 col-lg-3 fw-bolder fs-5 vipcols" style="color: purple;">درباره ما</div>
+            <div class="col-6 col-lg-3 fw-bolder fs-5 vipcols" style="color: purple;">پشتیبانی</div>
+            <div class="col-6 col-lg-3 vipcols"></div>
+            <div class="col-6 col-lg-3 vipcols"></div>
+            <div class="col-6 col-lg-3 vipcols"><a href="" class="text-white opacity-50">صفحات اجتماعی</a></div>
+            <div class="col-6 col-lg-3 vipcols"><a href="" class="text-white opacity-50">تیم ما</a></div>
+            <div class="col-6 col-lg-3 vipcols"></div>
+            <div class="col-6 col-lg-3 vipcols"></div>
+            <div class="col-6 col-lg-3 vipcols"><a href="" class="text-white opacity-50">محصولات بیشتر</a></div>
+            <div class="col-6 col-lg-3 vipcols"><a href="" class="text-white opacity-50">انتقاد</a></div>
+            <div class="col-6 col-lg-3 vipcols"></div>
+            <div class="col-6 col-lg-3 vipcols"></div>
+            <div class="col-6 col-lg-3 vipcols"><a href="" class="text-white opacity-50">اینستاگرام</a></div>
+            <div class="col-6 col-lg-3 vipcols"></div>
+            <div class="col-6 col-lg-3 vipcols"></div>
+            <div class="col-6 col-lg-3 vipcols"></div>
+            <div class="col-6 col-lg-3 vipcols"><a href="" class="text-white opacity-50">واتساپ</a></div>
+            <div class="col-6 col-lg-3 vipcols"></div>
+            <div class="col-6 col-lg-3 vipcols"></div>
+            <div class="col-6 col-lg-3 vipcols"></div>
+            <div class="col-6 col-lg-3 vipcols"><a href="" class="text-white opacity-50">تلگرام</a></div>
+            <div class="col-6 col-lg-3 vipcols"></div>
+            <div class="col-6 col-lg-3 vipcols"></div>
+            <div class="col-6 col-lg-3 vipcols"></div>
+            <div class="col-6 col-lg-3 vipcols"><a href="" class="text-white opacity-50">اطلاع رسانی</a></div>
+            <div class="col-6 col-lg-3 vipcols"></div>
+            <div class="col-6 col-lg-3 vipcols"></div>
+            <div class="col-6 col-lg-3 vipcols"></div>
+        </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const words = ["قدرتمند", "سریع", "سبک", "هوشمند"];
+      const el = document.getElementById('dynamic-word');
+      let i = 0, j = 0, isDel = false;
+
+      function type() {
+        const word = words[i];
+        if (!isDel && j <= word.length) {
+          el.textContent = word.substring(0, j);
+          j++;
+          setTimeout(type, 150);
+        } else if (isDel && j >= 0) {
+          el.textContent = word.substring(0, j);
+          j--;
+          setTimeout(type, 100);
+        } else {
+          isDel = !isDel;
+          if (!isDel) i = (i + 1) % words.length;
+          setTimeout(type, isDel ? 500 : 1200);
+        }
+      }
+      type();
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+      const words = ["قدرتمند", "سریع", "سبک", "هوشمند"];
+      const el = document.getElementById('dynamic-word2');
+      let i = 0, j = 0, isDel = false;
+
+      function type() {
+        const word = words[i];
+        if (!isDel && j <= word.length) {
+          el.textContent = word.substring(0, j);
+          j++;
+          setTimeout(type, 150);
+        } else if (isDel && j >= 0) {
+          el.textContent = word.substring(0, j);
+          j--;
+          setTimeout(type, 100);
+        } else {
+          isDel = !isDel;
+          if (!isDel) i = (i + 1) % words.length;
+          setTimeout(type, isDel ? 500 : 1200);
+        }
+      }
+      type();
+    });
+  </script>
+
+</body>
+</html>
